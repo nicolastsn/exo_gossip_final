@@ -1,0 +1,23 @@
+
+<h1>The Gossip Project</h1>
+<p>Les meilleurs gossip du Hacking Project.</p>
+<h6> - since Summer 2017 - </h6>
+
+
+
+<ul>
+	<%if user_signed_in? %>
+		<li>
+			<%= link_to 'Deconnexion', destroy_user_session_path %> 
+		</li>
+	<% else %>
+		<li>
+			<%= link_to 'Connexion', new_user_registration_path %> 
+		</li>
+
+		<li>
+			<%= link_to 'Crée ton compte', new_user_registration_path %>
+		</li>
+		
+	<%end%>
+</ul>
